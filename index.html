@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Baybayin Translator | Kevin Nisay</title>
+	<meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="Wurzel Studio" property="og:title">
+    <meta content="Bay bayin translator built by Wurzel studio to encourage people to learn and to do research of our own script/text." property="og:description">
+    <meta content="http://kevin-nisay.com/baybayin" property="og:url">
+    <meta content="Wurzel Studio" property="og:site_name">
+    <meta content="http://kevin-nisay.com/images/favcon.png" property="og:image">
+    <meta content="website" property="og:type">
+    <meta content="summary_large_image" name="twitter:card">
+    <link href="images/favcon.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="images/favcon.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="images/favcon.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/favcon.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="images/favcon.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="images/favcon.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="images/favcon.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="images/favcon.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="images/favcon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="images/favcon.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="images/favcon.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="images/favcon.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="images/favcon.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="images/favcon.png" rel="icon" type="image/x-icon">
+    <link href="images/favcon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="images/favcon.png" rel="manifest">
+    <meta content="#ffffff" name="msapplication-TileColor">
+    <meta content="images/favcon.png" name="msapplication-TileImage">
+    <meta content="#000" name="theme-color">
+<style>
+@font-face { font-family:'Tagalog Doctrina 1593'; src:url(../font/TagDoc93.ttf); }  
+.bt, .bt:hover, .bt:visited {text-decoration:none; cursor:pointer; font-size:20pt; font-family:'Tagalog Doctrina 1593'; color:#CC0033;}
+.cadr {width:80%; color:#0000FF; font-family:'Tagalog Doctrina 1593'; font-size:20pt; padding:5px;  }
+.kb-taga {font-family:'Tagalog Doctrina 1593'; font-size:18pt;}
+.kb-taga-b {font-family:'Tagalog Doctrina 1593'; font-size:30pt;}
+.tabl tr { vertical-align:top; text-align:center; }
+.tabl td { padding-left:0.2em;  padding-right:0.2em; white-space: nowrap; }
+</style>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="code/base.js"></script>
+<script src="code/carbay.js"></script>
+<script src="code/clipboard.js"></script>
+
+</head>
+<body onLoad="conversion.saisie.focus()">
+<div class="cb"><a href="index.html"><img src="images/kevinlogo.jpg" class="img-0" title="Online Dictionaries &gt; Index" alt="kevinnisay" width="90"></a></div>
+<div class="cc">
+<span class="kb-t">Baybayin</span> &nbsp; <span class="kb-taga">&#5898;&#5898;&#5900;&#5906;</span>
+</div>
+
+<div class="center"> 
+<br>
+<form name="conversion">
+<div class="delc"> 
+<br>
+<input type="button" class="eff" title="clear" onClick="reset();conversion.saisie.focus()" value="">
+</div>
+<textarea name="saisie" id="bar" rows="6" onKeyUp="transcrire()" class="cadr"></textarea>
+<br>
+<br>
+<input type="button" class="bf" data-clipboard-action="copy" data-clipboard-target="#bar" value="copy">
+<script>
+var clipboard = new Clipboard('.bf');
+clipboard.on('success', function(e) {
+console.log(e); 
+});
+clipboard.on('error', function(e) {
+console.log(e);
+});
+</script>
+<br>
+<br>
+<table class="tab-kb">
+<tr>
+<td>a</td>
+<td>i</td>
+<td>u</td>
+<td>i</td>
+<td>u</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><input type="button" value="&#5888;" onclick="alpha('&#5888;')" class="bt"></td>
+<td><input type="button" value="&#5889;" onclick="alpha('&#5889;')" class="bt"></td>
+<td><input type="button" value="&#5890;" onclick="alpha('&#5890;')" class="bt"></td>
+<td><input type="button" value=" &#5906;" onclick="alpha('&#5906;')" class="bt"></td>
+<td><input type="button" value=" &#5907;" onclick="alpha('&#5907;')" class="bt"></td>
+<td><input type="button" value=" &#5908;" onclick="alpha('&#5908;')" class="bt"></td>
+<td><input type="button" value="&#5942;" onclick="alpha('&#5942;')" class="bt" title="ponctuation"></td>
+</tr>
+</table>
+<br>
+<table class="tab-kb">
+<tr>
+<td>ka</td>
+<td>ga</td>
+<td>nga</td>
+<td>ta</td>
+<td>da</td>
+<td>na</td>
+<td>pa</td>
+<td>ba</td>
+<td>ma</td>
+<td>ya</td>
+<td>la</td>
+<td>wa</td>
+<td>sa</td>
+<td>ha</td>
+</tr>
+<tr>
+<td><input type="button" value="&#5891;" onclick="alpha('&#5891;')" class="bt"></td>
+<td><input type="button" value="&#5892;" onclick="alpha('&#5892;')" class="bt"></td>
+<td><input type="button" value="&#5893;" onclick="alpha('&#5893;')" class="bt"></td>
+<td><input type="button" value="&#5894;" onclick="alpha('&#5894;')" class="bt"></td>
+<td><input type="button" value="&#5895;" onclick="alpha('&#5895;')" class="bt"></td>
+<td><input type="button" value="&#5896;" onclick="alpha('&#5896;')" class="bt"></td>
+<td><input type="button" value="&#5897;" onclick="alpha('&#5897;')" class="bt"></td>
+<td><input type="button" value="&#5898;" onclick="alpha('&#5898;')" class="bt"></td>
+<td><input type="button" value="&#5899;" onclick="alpha('&#5899;')" class="bt"></td>
+<td><input type="button" value="&#5900;" onclick="alpha('&#5900;')" class="bt"></td>
+<td><input type="button" value="&#5902;" onclick="alpha('&#5902;')" class="bt"></td>
+<td><input type="button" value="&#5903;" onclick="alpha('&#5903;')" class="bt"></td>
+<td><input type="button" value="&#5904;" onclick="alpha('&#5904;')" class="bt"></td>
+<td><input type="button" value="&#5905;" onclick="alpha('&#5905;')" class="bt"></td>
+</tr>
+</table>
+</form>
+</div>
+	<div class="espb"></div>
+<div class="pa"><b>Instructions :</b>
+		<p>Baybayin font <a href="../font/TagDoc93.ttf">Tagalog Doctrina 1593</a> </p>
+		<br>
+		<br>
+		<p>The consonants r &amp; d have the same character.</p>
+		<p>The vowels i &amp; e and the vowels u &amp; o have the same character.</p>
+		<p>With a consonant, the vowels are represented with a diacritic sign:</p>
+			<table class="tabl">
+			<tr class="kb-taga-b x">
+			<td>&#5898;</td>
+			<td>&#5898;&#5906;</td>
+			<td>&#5898;&#5907;</td>
+			<td>&#5898;&#5908;</td>
+			</tr>
+			<tr>
+			<td>ba</td>
+			<td>bi<br>
+			be</td>
+			<td>bu<br>
+			bo</td>
+			<td>b</td>
+			</tr>
+			</table>
+
+		<br>
+		<br>
+		<br>
+		Copy [Ctrl]+[C] &amp; Paste [Ctrl]+[V]
+	</div>
+	
+
+	<footer>
+		<br>
+		<br>
+		<br>
+		<table class="eng">
+			<tbody>
+			<tr class="center">
+			<td colspan="4"><br>
+			<a class="co" href="#">kevin nisay &copy; Baybayin Translator 2019</a></td>
+			</tr>
+			</tbody>
+		</table>
+		<br>
+		<br>
+	</footer>
+</body>
+</html>
